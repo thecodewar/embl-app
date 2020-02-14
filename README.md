@@ -4,11 +4,18 @@ There are two different projects "api" (Backend - contains person API) and "embl
 
 ## Requirements
 
-For building and running the application you need:
+Java 8 and maven is already installed into Vagrant, other than this follow the steps below:
 
-- [JDK 11](http://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-2133151.html)
-- [Maven 3](https://maven.apache.org)
-- [NodeJS 10.16.0](https://nodejs.org/)
+Execute the following command on Vagrant instance:
+
+```shell
+ yum -y install nodejs
+```
+Then clone the repository:
+
+```shell
+git clone https://github.com/thecodewar/embl-app.git
+```
 
 ## Running the Backend Application locally
 
@@ -19,7 +26,7 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 ```shell
 mvn spring-boot:run
 ```
-The above command can be executed under api folder.
+The above command can be executed under embl-api/api folder.
 
 When the application is running you can execute the following into the browser to verify if the application is running successfully:
 
@@ -63,6 +70,9 @@ http://localhost:8080/api/persons?q=firstName==Adarsh
 To run "embl-ui" project, go to the root directory of embl-ui and execute the following command:
 
 ```shell
+yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_12.x | sudo -E bash -
+sudo yum install -y nodejs
 npm start
 ```
 
