@@ -26,12 +26,15 @@ When the application is running you can execute the following into the browser t
 ```shell
 http://localhost:8080/api/persons
 ```
+![PersonAPI](https://user-images.githubusercontent.com/18559069/74563405-8dbac780-4f8e-11ea-8cde-69db76b08d95.PNG)
 
 OR
 
 ```shell
 http://localhost:8080/swagger-ui.html
 ```
+
+![API](https://user-images.githubusercontent.com/18559069/74563403-8d223100-4f8e-11ea-82eb-e3eaf940ef85.PNG)
 
 OR from the command line you can execute the following and expects a JSON return:
 
@@ -51,9 +54,11 @@ Once the application is started, it can be access as:
 http://localhost:3000/
 ```
 
+![ReacPersonList](https://user-images.githubusercontent.com/18559069/74563396-8a274080-4f8e-11ea-812a-6f5036439819.PNG)
+
 Add, update, delete and List all persons can be done from the application.
 
-##Technology Stack
+## Technology Stack
 - Spring boot 2
 - ReactJS
 - Maven
