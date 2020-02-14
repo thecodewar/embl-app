@@ -10,7 +10,7 @@ For building and running the application you need:
 - [Maven 3](https://maven.apache.org)
 - [NodeJS 10.16.0](https://nodejs.org/)
 
-## Running the application locally
+## Running the Backend Application locally
 
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.embl.api.App` class from your IDE.
 
@@ -42,6 +42,24 @@ OR from the command line you can execute the following and expects a JSON return
 curl -X GET "http://localhost:8080/api/persons" -H "accept: */*"
 ```
 
+As RSQL parser is used into this project so you may look for the syntax how to make searches:
+
+- [RSQL Syntax](https://aboullaite.me/rsql/)
+
+For example the following url will return all results age greater than 30:
+
+```shell
+http://localhost:8080/api/persons?q=age=gt=30
+```
+
+The following command will return all users with first name as "Adarsh"
+
+```shell
+http://localhost:8080/api/persons?q=firstName==Adarsh
+```
+
+## Running the Front-end Application locally
+
 To run "embl-ui" project, go to the root directory of embl-ui and execute the following command:
 
 ```shell
@@ -58,7 +76,7 @@ http://localhost:3000/
 
 Add, update, delete and List all persons can be done from the application.
 
-## Technology Stack
+## Technology Stack Used
 - Spring boot 2
 - ReactJS
 - Maven
